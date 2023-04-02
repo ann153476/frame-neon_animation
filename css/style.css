@@ -1,0 +1,46 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+}
+
+.block{
+  position: relative;
+  margin: 10% auto 0;
+  width: 25%;
+  height: 400px;
+  background: linear-gradient(0deg, #000, #272727);
+}
+
+.block:before,.block:after{
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: -5px;
+  background: linear-gradient(45deg,rgba(241,196,15,1),rgba(69,167,63,1),rgba(57,172,113,1),
+    rgba(49,178,179,1), rgba(75,72,181,1),rgba(147,88,179,1),rgba(177,84,167,1),
+    rgba(174,68,84,1),rgba(177,84,167,1),rgba(147,88,179,1), rgba(75,72,181,1),
+    rgba(49,178,179,1),rgba(57,172,113,1),rgba(69,167,63,1),rgba(241,196,15,1));
+  background-size: 400%;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  border-radius: 10px;
+  z-index: -1;
+  animation: anim 20s linear infinite;
+}
+
+@keyframes anim{
+  0%{
+    background-position: 0 0;
+  }
+  50%{
+    background-position: 300% 0;
+  }
+  100%{
+    background-position: 0 0;
+  }
+} 
+
+.block:after{
+  filter: blur(30px);
+}
