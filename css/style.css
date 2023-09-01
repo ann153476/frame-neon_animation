@@ -9,6 +9,7 @@ body{
   margin: 10% auto 0;
   width: 25%;
   height: 400px;
+  border-radius: 10px;
   background: linear-gradient(0deg, #000, #272727);
 }
 
